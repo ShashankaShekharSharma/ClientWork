@@ -1,0 +1,11 @@
+*{
+    background-color: #D7EEB9;
+    padding: 0;
+    margin: 0;
+}
+.navbar{
+    background-color: #9aac83;
+    height: 30%;
+    width: 100%;
+    display: absolute;
+}
