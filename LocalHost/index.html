@@ -7,20 +7,63 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="nav">
-        <div id="navlogo">LocalHost</div>
-        <div id="navoptions">
-            <button class="button-33" role="button">Teams</button>
-            <button class="button-33" role="button">Contact</button>
-            <button class="button-33" role="button">Projects</button>
-        </div>
-    </div>
-       <div id="box">
+    <nav class="navbar">
+        <div class="logo">Local Host 3000</div>
+        <ul>
+          <li><a href="index.html">Teams</a></li>
+          <li><a href="#skill-bg">Contacts</a></li>
+          <li><a href="project.html">Projects</a></li>
+        </ul>
+    </nav>
+    <div id="box">
         <div id="in">
-            <div id="prime">You Say We Develop</div>
+            <div id="prime">You Say, We Develop</div>
             <div class="container">
-                <div class="typed-out">Web Developer</div></div>
+                <div class="typed-out" id="typed-text"></div>
+            </div>
         </div>
     </div>
+
+    <script>
+        const words = ["Web Developer", "Web Designer", "App Developer", "AI Consultations", "Custom Chatbots", "Data Analytics"];
+        let i = 0;
+        const typingSpeed = 100;
+        const eraseSpeed = 50;
+        const delayBetweenWords = 1000;
+
+        function typeWord() {
+            const typedTextElement = document.getElementById("typed-text");
+            let currentWord = words[i].split("");
+            let loopTyping = function() {
+                if (currentWord.length > 0) {
+                    typedTextElement.innerHTML += currentWord.shift();
+                    setTimeout(loopTyping, typingSpeed);
+                } else {
+                    setTimeout(eraseWord, delayBetweenWords);
+                }
+            };
+            loopTyping();
+        }
+
+        function eraseWord() {
+            const typedTextElement = document.getElementById("typed-text");
+            let currentWord = words[i].split("");
+            let loopErasing = function() {
+                if (currentWord.length > 0) {
+                    currentWord.pop();
+                    typedTextElement.innerHTML = currentWord.join("");
+                    setTimeout(loopErasing, eraseSpeed);
+                } else {
+                    i = (i + 1) % words.length;
+                    setTimeout(typeWord, typingSpeed);
+                }
+            };
+            loopErasing();
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            setTimeout(typeWord, delayBetweenWords);
+        });
+    </script>
 </body>
 </html>
