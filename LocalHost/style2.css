@@ -1,0 +1,96 @@
+/* General styling */
+* {
+    box-sizing: border-box;
+    padding-left: 10px;
+    padding-top: 10px;
+    color: #fff;
+  }
+  
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #211d1d;
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+  }
+  
+  /* Container for all cards */
+  .card-container {
+    display: flex;
+    gap: 50px;
+  }
+  
+  /* Styling for individual cards */
+  .card {
+    position: relative;
+    background-color: #fff;
+    width: 300px;
+    height: 250px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+    font-size: 2em;
+    font-weight: 800;
+    background: linear-gradient(315deg,#272828,#0a0a0a);
+  }
+  
+  .card svg {
+    width: 48px;
+    fill: #333;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  
+  .card:hover {
+    transform: rotate(-5deg) scale(1.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    opacity: 0;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  
+  .card:hover .card__content {
+    transform: translate(-50%, -50%) rotate(0deg);
+    opacity: 1;
+  }
+  .card__title {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+    font-weight: 700;
+  }
+  
+  .card__description {
+    margin: 10px 0 0;
+    font-size: 14px;
+    color: #777;
+    line-height: 1.4;
+  }
+  .card #svg{
+    padding-left: 0px;
+  }
+  .card:hover #svg{
+    opacity: 0;
+    transform: rotate(-45deg);
+    scale: 0;
+
+  }
+  .card:hover svg {
+    scale: 0;
+    transform: rotate(-45deg);
+  }
+  
