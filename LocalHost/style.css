@@ -54,31 +54,31 @@ body {
   border-radius: 0 100%  0 15px;
 }
 
-.card:hover::before,
+/* .card:hover::before,
 .card:hover:after {
   width: 100%;
   height: 100%;
   border-radius: 15px;
   transition: all 0.5s;
-}
+} */
 
 /* .card:hover:after {
   content: "";
 } */
-
+/* 
 .card:hover:after {
   content: "HTML\A CSS\A JS\A React\A Next\A Django";
-  white-space: pre; /* or pre-wrap */
+  white-space: pre; 
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  line-height: 1.5em; /* Adjust line height as needed */
+  line-height: 1.5em;
   color: white;
   font-size: 20px;
   font-weight: normal;
-}
+} */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -116,11 +116,15 @@ body {
 }
 
 #prime {
-  height: 50px;
-  padding-top: 30px;
+  padding-top: 40px;
   font-size: 60px;
   font-weight: bold;
   font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+   
+}
+
+.container {
   text-align: center;
 }
 
@@ -158,7 +162,7 @@ body {
 .container {
   display: relative;
   text-align: center;
-  padding-top: 5%;
+  padding-top: 2%;
   font-size: 1.6rem;
 }
 
