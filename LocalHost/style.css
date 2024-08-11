@@ -13,6 +13,8 @@ body {
   background-color: #000000;
 }
 
+
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -50,11 +52,15 @@ body {
 }
 
 #prime {
-  height: 50px;
-  padding-top: 30px;
+  padding-top: 40px;
   font-size: 60px;
   font-weight: bold;
   font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+   
+}
+
+.container {
   text-align: center;
 }
 
@@ -91,7 +97,7 @@ body {
 .container {
   display: relative;
   text-align: center;
-  padding-top: 5%;
+  padding-top: 2%;
   font-size: 1.6rem;
 }
 
