@@ -10,7 +10,4 @@
 # LocalHost 8080 :
  - Hrishi (priv)
 
-# LocalHost 8081 :
- - Hrishi 
- - Vinu
- - Shashanka
+# LocalHost 8081 -> ML and CV Solutions
