@@ -1,88 +1,92 @@
-/* From Uiverse.io by Praashoo7 */ 
-*{
-    background-color: #3f3f3f;
-    /* padding-left: 10px; */
+body {
+  background-color: #313131;
 }
-.card {
-    width: 17em;
-    height: 22.5em;
-    background: #171717;
-    transition: 1s ease-in-out;
-    clip-path: polygon(30px 0%, 100% 0, 100% calc(100% - 30px), calc(100% - 30px) 100%, 0 100%, 0% 30px);
-    border-top-right-radius: 20px;
-    border-bottom-left-radius: 20px;
-    display: flex;
-    flex-direction: column;
-  }
-  #Name{
-    background-color: #171717;
-    color: white;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 1.11em;
-    text-align: center;
-  }
-  .info{
-    background-color: #171717;
-  }
-  
-  .card span {
-    font-weight: bold;
-    color: white;
-    text-align: center;
-    display: block;
-    font-size: 1em;
-    background-color: #171717;
-  }
-  
-  .card .info {
-    font-weight: 400;
-    color: white;
-    display: block;
-    text-align: center;
-    background-color: #171717;
-    font-size: 0.72em;
-    margin: 1em;
-  }
-  
-  .card .img {
-    width: 4.8em;
-    height: 4.8em;
-    background: rgb(0, 0, 0);
-    border-radius: 15px;
-    margin: auto;
-  }
-  
-  .card .share {
-    margin-top: 1em;
-    display: flex;
-    background-color: #171717;
-    justify-content: center;
-    gap: 1em;
-  }
-  
-  .card a {
-    color: white;
-    transition: .4s ease-in-out;
-  }
 
-  .card a:hover {
-    color: rgb(0, 0, 0);
-  }
-  
-  .card button {
-    padding: 0.8em 1.7em;
-    display: block;
-    margin: auto;
-    border-radius: 25px;
-    border: none;
-    font-weight: bold;
-    background: #b7b4b4;
-    color: rgb(0, 0, 0);
-    transition: .4s ease-in-out;
-  }
-  
-  .card button:hover {
-    background: rgb(135, 127, 127);
-    color: white;
-    cursor: pointer;
-  }
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.card {
+  background-color: #000000;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+}
+
+.img {
+  background-color: #ffffff;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+
+.info {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #ffffff;
+}
+
+#Name {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.share {
+  margin-top: 15px;
+}
+
+.share a {
+  margin: 0 5px;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.share a:hover {
+  color: #0073e6;
+}
+
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(0, 0, 0);
+  padding: 0 30px;
+  height: 60px;
+}
+
+.navbar .logo {
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  font-size: 20px;
+  color: white;
+}
+
+.navbar ul {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+}
+
+.navbar a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  padding: 15px;
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+}
+
+.navbar a:hover {
+  background-color: hsl(0, 0%, 100%);
+  color: rgb(0, 0, 0);
+} 

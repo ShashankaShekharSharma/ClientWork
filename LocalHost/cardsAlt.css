@@ -1,0 +1,210 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    color: aliceblue;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    background-color: #000000;
+    overflow-x: hidden;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(0, 0, 0);
+    padding: 0 30px;
+    height: 60px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar .logo {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 20px;
+    color: white;
+}
+
+.navbar ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+}
+
+.navbar a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    padding: 15px;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar a:hover {
+    background-color: hsl(0, 0%, 100%);
+    color: rgb(0, 0, 0);
+}
+
+#box {
+    height: calc(100% - 60px);
+    width: 100%;
+    background-color: #2f2f2f;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 60px;
+}
+
+#in {
+    width: 100%;
+    background-color: #111;
+    position: relative;
+    z-index: 2;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.title #prime {
+    font-size: 50px;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.container {
+    font-size: 1.6rem;
+    margin-bottom: 50px;
+    color: #ff9900;
+}
+
+.typed-out {
+    overflow: hidden;
+    border-right: .15em solid orange;
+    white-space: nowrap;
+    display: inline-block;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* Circle Container */
+.circle-container {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    margin: 0 auto;
+}
+
+.segment {
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    top: 25%;
+    left: 25%;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.5s, width 0.5s, height 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1a1a1a;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.segment .content {
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.5s;
+    padding: 20px;
+}
+
+.segment h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #ff9900;
+}
+
+.segment p {
+    font-size: 16px;
+    color: #fff;
+}
+
+/* Positioning each segment */
+#webdev {
+    transform: rotate(0deg);
+}
+
+#appdev {
+    transform: rotate(90deg);
+}
+
+#design {
+    transform: rotate(180deg);
+}
+
+#ai {
+    transform: rotate(270deg);
+}
+
+/* Hover Effects */
+#webdev:hover {
+    transform: translate(-150px, -150px);
+    width: 300px;
+    height: 300px;
+}
+
+#appdev:hover {
+    transform: translate(150px, -150px);
+    width: 300px;
+    height: 300px;
+}
+
+#design:hover {
+    transform: translate(150px, 150px);
+    width: 300px;
+    height: 300px;
+}
+
+#ai:hover {
+    transform: translate(-150px, 150px);
+    width: 300px;
+    height: 300px;
+}
+
+.segment:hover .content {
+    opacity: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 500px) {
+    .circle-container {
+        width: 300px;
+        height: 300px;
+    }
+
+    .segment {
+        top: 25%;
+        left: 25%;
+    }
+
+    #webdev:hover,
+    #appdev:hover,
+    #design:hover,
+    #ai:hover {
+        width: 250px;
+        height: 250px;
+    }
+}
